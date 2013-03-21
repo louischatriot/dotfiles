@@ -1,0 +1,5 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+MAILCHIMP_API_KEY="b84be5f38b6706ead1cab6e6e246be84-us5"
+MAILER_USERNAME='mailer'
+MAILER_PWD='98306d8b-b67d-4cac-b92b-61ddac98af77'
+TLDR_API_DIR='/home/louis/Projects/tldr/api'
