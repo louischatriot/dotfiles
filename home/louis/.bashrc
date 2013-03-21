@@ -114,11 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 
-#Appended by Louis to customize bash
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[37m\]\w\[\033[31m\]$(__git_ps1)\[\033[37m\]\$ '
-#PS1="\[\e[0;32m\][\u@\H]\[\e[4;37m\]\w\[\e[0;37m\]:"
-#PS1="\[\e[1;31m\][\u@\H]\[\e[4;37m\]\w\[\e[0;37m\]:"   # in bold red for root
-#PS1="\[\e[0;36m\][\u@\H]\[\e[4;37m\]\w\[\e[0;37m\]:"   # in cyan for server
 
 # Quick access to directories
 api=/home/louis/Projects/tldr/api
