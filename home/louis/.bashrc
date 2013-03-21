@@ -137,3 +137,7 @@ chrome() {
 peg() {
   ps -ef | grep $1
 }
+
+ngrep() {
+  grep -nri $1 . --exclude-dir dist --exclude-dir node_modules
+}
