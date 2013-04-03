@@ -140,5 +140,5 @@ peg() {
 }
 
 ngrep() {
-  grep -nri $1 . --exclude-dir dist --exclude-dir node_modules
+  grep -nri $1 . --exclude-dir dist --exclude-dir node_modules --exclude-dir .git
 }
