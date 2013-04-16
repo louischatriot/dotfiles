@@ -125,11 +125,6 @@ clients=/home/louis/Projects/tldr/clients
 alias gco='git add .; git commit -m '
 alias gs='git status'
 
-skype() {
-  /usr/bin/skype &
-  exit
-}
-
 chrome() {
   google-chrome &
   exit
