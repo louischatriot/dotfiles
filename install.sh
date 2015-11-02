@@ -2,6 +2,9 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt-get install git
+git config --global user.name "Louis Chatriot"
+git config --global user.email "louis.chatriot@gmail.com"
+git config --global push.default "matching"
 
 # Nice Git-aware prompt
 echo "PS1='\[\033[33m\]\w\[\033[31m\]\$(__git_ps1)\[\033[37m\]\$ '" >> ~/.bashrc
