@@ -53,3 +53,10 @@ sudo apt-get install keepassx
 
 # Skype
 sudo apt-get install skype
+
+# Java - Untested
+sudo apt-get install openjdk-7-jre
+sudo apt-get install icedtea-netx
+
+
+
