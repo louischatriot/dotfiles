@@ -36,6 +36,10 @@ sudo apt-get install vim-gnome
 curl -L https://bit.ly/janus-bootstrap | bash
 echo 'color molokai' >> ~/.vimrc.after
 echo 'let mapleader=","' >> ~/.vimrc.before
+cd ~
+mkdir .janus
+cd .janus
+git clone git@github.com:digitaltoad/vim-jade.git
 
 # KeypassX
 sudo apt-get install keepassx
