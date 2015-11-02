@@ -40,6 +40,11 @@ cd ~
 mkdir .janus
 cd .janus
 git clone git@github.com:digitaltoad/vim-jade.git
+mkdir -p ~/.janus/mysnippets/snippets
+cd ~/.janus/mysnippets/snippets
+touch ~/.janus/mysnippets/snippets/_.snippets
+echo "snippet cl" > js.snippets
+echo "console.log('')" >> js.snippets
 
 # KeypassX
 sudo apt-get install keepassx
