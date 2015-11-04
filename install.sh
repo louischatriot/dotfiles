@@ -8,9 +8,12 @@ git config --global user.name "Louis Chatriot"
 git config --global user.email "louis.chatriot@gmail.com"
 git config --global push.default "matching"
 
-# Nice Git-aware prompt
+# Bash customization
 echo "PS1='\[\033[33m\]\w\[\033[31m\]\$(__git_ps1)\[\033[37m\]\$ '" >> ~/.bashrc
 echo 'export GIT_PS1_SHOWDIRTYSTATE=1' >> ~/.bashrc
+echo 'ngrep() {' >> ~/.bashrc
+echo '  grep -nr $1 *' >> ~/.bashrc
+echo '}' >> ~/.bashrc
 
 cd ~
 mkdir temp
