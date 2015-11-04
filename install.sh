@@ -2,7 +2,25 @@ sudo dpkg --add-architecture i386
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt-get install make
+sudo apt-get install gcc
+sudo apt-get install g++
+sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 
+# Python 2.7
+cd ~
+mkdir temp
+cd temp
+wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+tar -xvf Python-2.7.5.tgz
+cd Python-2.7.5
+./configure
+make
+sudo make install
+rm -rf ~/temp/Python-2.7.5
+
+# Git
 sudo apt-get install git
 git config --global user.name "Louis Chatriot"
 git config --global user.email "louis.chatriot@gmail.com"
@@ -15,11 +33,10 @@ echo 'ngrep() {' >> ~/.bashrc
 echo '  grep -nr $1 *' >> ~/.bashrc
 echo '}' >> ~/.bashrc
 
+# Node
 cd ~
 mkdir temp
 cd temp
-
-# Node
 git clone https://github.com/nodejs/node.git
 git checkout v4.2.1
 cd node
