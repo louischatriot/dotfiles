@@ -97,4 +97,9 @@ cd redis-stable
 make
 sudo make install
 
+# Nginx
+sudo aptt-get -y install nginx-full
+
+
+
 
