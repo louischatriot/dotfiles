@@ -2,11 +2,11 @@ sudo dpkg --add-architecture i386
 sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install make
-sudo apt-get install gcc
-sudo apt-get install g++
-sudo apt-get install build-essential checkinstall
-sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get -y install make
+sudo apt-get -y install gcc
+sudo apt-get -y install g++
+sudo apt-get -y install build-essential checkinstall
+sudo apt-get -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
 
 # Python 2.7
 cd ~
@@ -21,7 +21,7 @@ sudo make install
 rm -rf ~/temp/Python-2.7.5
 
 # Git
-sudo apt-get install git
+sudo apt-get -y install git
 git config --global user.name "Louis Chatriot"
 git config --global user.email "louis.chatriot@gmail.com"
 git config --global push.default "matching"
@@ -60,14 +60,14 @@ rm -rf ~/temp/node
 #mv * /usr/local/lib
 
 # Misc
-sudo apt-get install ruby
-sudo apt-get install rake
-sudo apt-get install ack-grep
-sudo apt-get install exuberant-ctags
+sudo apt-get -y install ruby
+sudo apt-get -y install rake
+sudo apt-get -y install ack-grep
+sudo apt-get -y install exuberant-ctags
 
 # Vim and gvim
-sudo apt-get install vim
-sudo apt-get install vim-gnome
+sudo apt-get -y install vim
+sudo apt-get -y install vim-gnome
 curl -L https://bit.ly/janus-bootstrap | bash
 echo 'color molokai' >> ~/.vimrc.after
 echo 'let mapleader=","' >> ~/.vimrc.before
@@ -82,10 +82,10 @@ echo "snippet cl" > js.snippets
 echo "console.log('')" >> js.snippets
 
 # KeypassX
-sudo apt-get install keepassx
+sudo apt-get -y install keepassx
 
 # Skype
-sudo apt-get install skype
+sudo apt-get -y install skype
 
 # Redis
 cd ~/temp
