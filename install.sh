@@ -49,9 +49,10 @@ sudo npm install -g nodemon
 rm -rf ~/temp/node
 
 # Alternate Node installation for x64 Linux if low RAM prevents compiling
+#cd ~/temp
 #wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
 #tar -xvf node-v4.2.2-linux-x64.tar.gz
-#cd node-v4.2.2-linux-x64.tar.gz
+#cd node-v4.2.2-linux-x64
 #cd bin
 #mv * /usr/local/bin
 #cd ../lib
