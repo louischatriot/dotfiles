@@ -32,6 +32,8 @@ echo 'export GIT_PS1_SHOWDIRTYSTATE=1' >> ~/.bashrc
 echo 'ngrep() {' >> ~/.bashrc
 echo '  grep -nr $1 *' >> ~/.bashrc
 echo '}' >> ~/.bashrc
+echo "alias gco='git add .; git commit -m '" >> ~/.bashrc
+
 
 # Node
 cd ~
