@@ -7,6 +7,7 @@ sudo apt-get -y install gcc
 sudo apt-get -y install g++
 sudo apt-get -y install build-essential checkinstall
 sudo apt-get -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+sudo apt-get -y install curl
 
 # Python 2.7
 cd ~
