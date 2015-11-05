@@ -37,28 +37,15 @@ echo "alias gco='git add .; git commit -m '" >> ~/.bashrc
 
 
 # Node
-cd ~
-mkdir temp
-cd temp
-git clone https://github.com/nodejs/node.git
-git checkout v4.2.1
-cd node
-./configure
-make
-sudo make install
-sudo npm install -g nodemon
-rm -rf ~/temp/node
-
-# Alternate Node installation for x64 Linux if low RAM prevents compiling
-#cd ~/temp
-#wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
-#tar -xvf node-v4.2.2-linux-x64.tar.gz
-#cd node-v4.2.2-linux-x64
-#cd bin
-#mv * /usr/local/bin
-#cd ../lib
-#sudo mkdir /usr/local/lib
-#mv * /usr/local/lib
+cd ~/temp
+wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
+tar -xvf node-v4.2.2-linux-x64.tar.gz
+cd node-v4.2.2-linux-x64
+cd bin
+mv * /usr/local/bin
+cd ../lib
+sudo mkdir /usr/local/lib
+mv * /usr/local/lib
 
 # Misc
 sudo apt-get -y install ruby
