@@ -1,0 +1,15 @@
+# Need to useradd -mrU node_example before
+
+[Service]
+ExecStart=/usr/local/bin/node /home/node_example/code/index.js
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node_example
+User=node_example
+Group=node_example
+Environment=NODE_ENV=prod
+WorkingDirectory=/home/node_example/code
+
+[Install]
+WantedBy=multi-user.target
