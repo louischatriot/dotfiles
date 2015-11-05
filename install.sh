@@ -56,6 +56,7 @@ sudo apt-get -y install exuberant-ctags
 # Vim and gvim
 sudo apt-get -y install vim
 sudo apt-get -y install vim-gnome
+cd ~
 curl -L https://bit.ly/janus-bootstrap | bash
 echo 'color molokai' >> ~/.vimrc.after
 echo 'let mapleader=","' >> ~/.vimrc.before
