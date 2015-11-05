@@ -98,7 +98,8 @@ make
 sudo make install
 
 # Nginx
-sudo aptt-get -y install nginx-full
+# With this installation the conf file will be /etc/nginx/nginx.conf
+sudo apt-get -y install nginx-full
 
 
 
