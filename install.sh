@@ -34,18 +34,20 @@ echo 'ngrep() {' >> ~/.bashrc
 echo '  grep -nr $1 *' >> ~/.bashrc
 echo '}' >> ~/.bashrc
 echo "alias gco='git add .; git commit -m '" >> ~/.bashrc
-
+echo "pgrep() {" >> ~/.bashrc
+echo "  ps -ef | grep $1" >> ~/.bashrc
+echo "}" >> ~/.bashrc
 
 # Node
 cd ~/temp
-wget https://nodejs.org/dist/v4.2.2/node-v4.2.2-linux-x64.tar.gz
-tar -xvf node-v4.2.2-linux-x64.tar.gz
-cd node-v4.2.2-linux-x64
+wget https://nodejs.org/dist/v6.11.4/node-v6.11.4-linux-x64.tar.xz
+tar -xvf node-v6.11.4-linux-x64.tar.xz
+cd node-v6.11.4-linux-x64
 cd bin
-mv * /usr/local/bin
+sudo mv * /usr/local/bin
 cd ../lib
 sudo mkdir /usr/local/lib
-mv * /usr/local/lib
+sudo mv * /usr/local/lib
 
 # Misc
 sudo apt-get -y install ruby
