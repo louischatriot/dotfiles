@@ -1,4 +1,7 @@
 # Need to useradd -mrU node_example before
+# Put this file in /lib/systemd/system
+# Then 'systemctl start node_example' will create
+# a symlink to it in /etc/systemd/system/multi-user.target.wants
 
 [Service]
 ExecStart=/usr/local/bin/node /home/node_example/code/index.js
