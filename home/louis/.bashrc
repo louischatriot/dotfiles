@@ -114,6 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Git aware prompt
+source /etc/bash_completion.d/git-prompt   # Necessary in non-Ubuntu environments
 export GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[37m\]\w\[\033[31m\]$(__git_ps1)\[\033[37m\]\$ '
 
