@@ -1,0 +1,19 @@
+# Node systemd service
+# =======================
+
+[Unit]
+Description=Project
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/project.pid
+ExecStart=/bin/bash /home/louis/deploy/scripts/deploy-project.sh
+TimeoutStopSec=5
+KillMode=mixed
+User=louis
+
+[Install]
+WantedBy=multi-user.target
+
+
