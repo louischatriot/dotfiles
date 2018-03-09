@@ -1,6 +1,8 @@
 # Launch Gunicorn script as a systemd service
 # =======================
 
+# In the After clause it's a good idea to add e.g. postgresql.service if the Python app uses Postgresql
+
 [Unit]
 Description=The project
 After=network.target
