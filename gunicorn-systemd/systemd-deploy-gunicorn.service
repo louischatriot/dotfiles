@@ -1,0 +1,17 @@
+# Launch Gunicorn script as a systemd service
+# =======================
+
+[Unit]
+Description=The project
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/project.pid
+ExecStart=/bin/bash /home/louis/deploy/scripts/deploy-gunicorn.sh
+TimeoutStopSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+
