@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='LC_COLLATE=C ls -alF --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 
@@ -114,6 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 # Git aware prompt
+source /etc/bash_completion.d/git-prompt   # Necessary in non-Ubuntu environments
 export GIT_PS1_SHOWDIRTYSTATE=true
 PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[37m\]\w\[\033[31m\]$(__git_ps1)\[\033[37m\]\$ '
 
@@ -134,6 +135,7 @@ peg() {
   ps -ef | grep $1
 }
 
+# This one is for Node. For Python: --exclude-dir=env --exclude-dir=_old --exclude-dir=__pycache__
 ngrep() {
   grep -nri $1 . --exclude-dir dist --exclude-dir node_modules --exclude-dir .git
 }
