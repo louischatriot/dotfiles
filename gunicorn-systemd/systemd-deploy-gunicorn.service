@@ -6,6 +6,8 @@
 [Unit]
 Description=The project
 After=network.target
+StartLimitIntervalSec=20
+StartLimitBurst=4
 
 [Service]
 Type=simple
@@ -13,6 +15,7 @@ PIDFile=/run/project.pid
 ExecStart=/bin/bash /home/louis/deploy/scripts/deploy-gunicorn.sh
 TimeoutStopSec=5
 KillMode=mixed
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
