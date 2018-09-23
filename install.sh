@@ -10,16 +10,16 @@ sudo apt-get -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsql
 sudo apt-get -y install curl
 
 # Python 2.7
-cd ~
-mkdir temp
-cd temp
-wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
-tar -xvf Python-2.7.5.tgz
-cd Python-2.7.5
-./configure
-make
-sudo make install
-rm -rf ~/temp/Python-2.7.5
+# cd ~
+# mkdir temp
+# cd temp
+# wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tgz
+# tar -xvf Python-2.7.5.tgz
+# cd Python-2.7.5
+# ./configure
+# make
+# sudo make install
+# rm -rf ~/temp/Python-2.7.5
 
 # Git
 sudo apt-get -y install git
@@ -29,14 +29,18 @@ git config --global push.default "matching"
 
 # Bash customization
 echo "PS1='\[\033[33m\]\w\[\033[31m\]\$(__git_ps1)\[\033[37m\]\$ '" >> ~/.bashrc
+# PS1='\[\033[33m\]\w\[\033[31m\]$(__git_ps1)\[\033[37m\]$ '
+
 echo 'export GIT_PS1_SHOWDIRTYSTATE=1' >> ~/.bashrc
 echo 'ngrep() {' >> ~/.bashrc
-echo '  grep -nr $1 *' >> ~/.bashrc
+#echo '  grep -nr $1 *' >> ~/.bashrc
+echo '  grep -nrE "$1" * --exclude-dir=env --exclude-dir=_old --exclude-dir=__pycache__ --exclude-dir=static' >> ~/.bashrc
 echo '}' >> ~/.bashrc
 echo "alias gco='git add .; git commit -m '" >> ~/.bashrc
 echo "pgrep() {" >> ~/.bashrc
 echo "  ps -ef | grep $1" >> ~/.bashrc
 echo "}" >> ~/.bashrc
+
 
 # Node
 cd ~/temp
@@ -79,18 +83,18 @@ sudo apt-get -y install keepassx
 sudo apt-get -y install skype
 
 # Redis
-cd ~/temp
-mkdir redis
-cd redis
-wget http://download.redis.io/redis-stable.tar.gz
-tar xvzf redis-stable.tar.gz
-cd redis-stable
-make
-sudo make install
+# cd ~/temp
+# mkdir redis
+# cd redis
+# wget http://download.redis.io/redis-stable.tar.gz
+# tar xvzf redis-stable.tar.gz
+# cd redis-stable
+# make
+# sudo make install
 
 # Nginx
 # With this installation the conf file will be /etc/nginx/nginx.conf
-sudo apt-get -y install nginx-full
+# sudo apt-get -y install nginx-full
 
 
 
