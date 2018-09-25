@@ -41,6 +41,8 @@ echo "pgrep() {" >> ~/.bashrc
 echo "  ps -ef | grep $1" >> ~/.bashrc
 echo "}" >> ~/.bashrc
 
+echo "alias ll='ls -alFh --color --group-directories-first'" >> ~/.bashrc
+
 
 # Node
 cd ~/temp
