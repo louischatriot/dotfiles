@@ -126,6 +126,12 @@ clients=/home/louis/Projects/tldr/clients
 alias gco='git add .; git commit -m '
 alias gs='git status'
 
+git_delete_merged_branches() {
+  # This works for merge branches, not for squash and merged branches on Github
+  git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d
+  git remote prune origin
+}
+
 chrome() {
   google-chrome &
   exit
