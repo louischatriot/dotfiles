@@ -127,6 +127,9 @@ alias gco='git add .; git commit -m '
 alias gs='git status'
 
 git_delete_merged_branches() {
+  # Version useful with Github's squash and merge
+  git checkout master && comm -12 <(git branch | sed "s/ *//g") <(git remote prune origin | sed "s/^.*origin\///g") | xargs -L1 git branch -D
+
   # This works for merge branches, not for squash and merged branches on Github
   git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d
   git remote prune origin
