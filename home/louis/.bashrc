@@ -148,3 +148,9 @@ peg() {
 ngrep() {
   grep -nri $1 . --exclude-dir dist --exclude-dir node_modules --exclude-dir .git
 }
+
+compresspdf() {
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.6 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$2 "$1"
+}
+
+
